@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import * as fs from 'fs';
+import { Item, Organization, Pricing } from './app.entity';
 
 
 @Module({
@@ -17,7 +17,7 @@ import * as fs from 'fs';
         username: configService.get("MASTER_DB_USER"),
         password: configService.get("MASTER_DB_PASSWORD"),
         database: configService.get("MASTER_DB_NAME"),
-        entities: [],
+        entities: [Item, Organization, Pricing],
         // logging: true,
         synchronize: true,
         ssl: {
@@ -26,7 +26,7 @@ import * as fs from 'fs';
       }),
       inject: [ConfigService],
     }),
-    TypeOrmModule.forFeature([]),
+    TypeOrmModule.forFeature([Item, Organization, Pricing]),
   ],
   controllers: [AppController],
   providers: [AppService],
