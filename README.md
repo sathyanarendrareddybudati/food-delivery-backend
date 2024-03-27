@@ -81,3 +81,29 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+
+## sample data to hit an api call in data(body)
+
+```bash
+{
+    "zone": "north",
+    "organization_id": 2,
+    "total_distance": 6,
+    "item_type": "non-perishable"
+}
+
+{
+    "zone": "central",
+    "organization_id": 1,
+    "total_distance": 6,
+    "item_type": "perishable"
+}
+
+{
+    "zone": "central",
+    "organization_id": 1,
+    "total_distance": 6,
+    "item_type": "non-perishable"
+}
+```

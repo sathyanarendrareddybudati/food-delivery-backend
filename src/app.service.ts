@@ -16,12 +16,12 @@ export class AppService {
   ) { }
 
   getHello(): string {
-    return 'Hello World!';
+    return 'Welcome to pricing service';
   }
 
   async calculatePricing(dto: CalculateDeliveryCost): Promise<{ total_price: number }> {
     const item = await this.itemRepository.findOne({ where: { type: dto.item_type } });
-    
+
     if (!item) throw new NotFoundException('Item not found');
 
     const organization = await this.organizationRepository.findOne({ where: { id: dto.organization_id } });

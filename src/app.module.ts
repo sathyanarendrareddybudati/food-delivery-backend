@@ -12,7 +12,7 @@ import { Item, Organization, Pricing } from './app.entity';
     TypeOrmModule.forRootAsync({
       useFactory: async (configService: ConfigService) => ({
         type: "postgres",
-        host : configService.get("MASTER_DB_HOST"),
+        host: configService.get("MASTER_DB_HOST"),
         port: 18815,
         username: configService.get("MASTER_DB_USER"),
         password: configService.get("MASTER_DB_PASSWORD"),
@@ -31,4 +31,4 @@ import { Item, Organization, Pricing } from './app.entity';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

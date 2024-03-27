@@ -53,10 +53,10 @@ describe('PricingService', () => {
   describe('calculatePricing', () => {
     it('should calculate the correct pricing for perishable items within base distance', async () => {
       const result = await service.calculatePricing({
-        zone: 'South Zone',
+        zone: 'north',
         organization_id: 2,
-        total_distance: 1,
-        item_type: 'Books',
+        total_distance: 6,
+        item_type: 'non-perishable',
       });
       expect(result.total_price).toEqual(1000);
     });
