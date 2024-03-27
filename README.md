@@ -42,6 +42,7 @@ MASTER_DB_USER = <your-db-user>
 MASTER_DB_PASSWORD = <your-db-password>
 MASTER_DB_HOST = <your-db-host>
 MASTER_DB_PORT = <your-db-port>
+```
 
 ## Running the app
 
@@ -59,12 +60,13 @@ $ npm run start:prod
 ## Access the application.
 
 ```bash
-http://localhost:3000
+http://localhost:3000 or https://food-delivery-backend-c24z.onrender.com/
 ```
-or 
+
+## Access the application for Swagger
 
 ```bash
-http://localhost:3000/api-docs
+http://localhost:3000/api-docs or https://food-delivery-backend-c24z.onrender.com/api-docs
 ```
 
 ## Test
